@@ -10,9 +10,6 @@
 
 Install PyTorch 2.8.0 following the [official instructions](https://pytorch.org/).
 
-bash
-
-
 
 ```
 git clone https://github.com/moji1017/NLCer.git
@@ -44,7 +41,6 @@ args.imbalance_coefficient = 1          # Controls severity of class imbalance
 
 Run the pipeline:
 
-bash
 
 
 
@@ -82,7 +78,6 @@ Each dataset includes:
 
 To assess filtering performance in the absence of ground-truth noise labels, we use 5-fold cross-validation. Run:
 
-bash
 
 
 
@@ -92,41 +87,3 @@ python k_fold_evaluation.py
 
 Evaluation results are saved in `./output/evaluations/`.
 
-## **Output Structure**
-
-文本
-
-
-
-```
-output/
-├── NES/                     # Selected α, λ, and pseudo-labeling start epoch
-├── NLCer/                   # Training and validation metrics for each epoch
-├── NLCer_filtering/         # Clean/noisy sample identification
-└── evaluations/             # 5-fold cross-validation evaluation results
-```
-
-## **Citation**
-
-If you use NLCer in your research, please cite:
-
-bibtex
-
-
-
-```
-@misc{nlcer2026,
-  author = {Mo, Ji and Team},
-  title = {{NLCer}: Noisy Label Cleaning for Geological Data with Mixed and Long-Tailed Noise},
-  year = {2026},
-  howpublished = {\url{https://github.com/moji1017/NLCer}}
-}
-```
-
-## **License**
-
-This project is licensed under the MIT License — see the [LICENSE](https://www.qianwen.com/chat/LICENSE) file for details.
-
-## **Contact**
-
-For questions or collaboration, please contact: mailto:moji@example.edu
